@@ -1,0 +1,24 @@
+{
+  "entities": {
+    "Employee": {
+      "title": "Employee",
+      "description": "Employee basic and work profile",
+      "type": "object",
+      "properties": {
+        "id": { "type": "integer" },
+        "name": { "type": "string" },
+        "photo": { "type": "string" },
+        "doj": { "type": "string", "format": "date" },
+        "status": { "type": "string", "enum": ["Active", "Left"] },
+        "type": { "type": "string", "enum": ["Worker", "Staff"] },
+        "monthlySalary": { "type": "number" },
+        "shiftType": { "type": "string", "enum": ["Day", "Night", "Rotational"] },
+        "weeklyOff": { "type": "integer" },
+        "sundayRule": { "type": "boolean" },
+        "holidayRule": { "type": "boolean" },
+        "esiEnabled": { "type": "boolean" }
+      },
+      "required": ["name", "doj", "monthlySalary"]
+    }
+  }
+}
